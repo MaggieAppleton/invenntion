@@ -21,6 +21,14 @@ First result:
 Second result:
 ![](images/sketch3.jpg)
 
+## User Flows
+
+Onboarding
+![](images/onboarding.png)
+
+Main flow
+![](images/main-flow.png)
+
 ## Requirements
 
 ### Essential
@@ -47,3 +55,5 @@ Users should be able to:
 ## Todos
 
 - [ ] Make wireframes that meet all the requirements
+- [ ] Make an example dataset of prompts and good answers
+- [ ] 
