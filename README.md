@@ -53,6 +53,7 @@ Users should be able to:
 - copy generated results to the clipboard
 - save a PNG of the final venn digram with inputs and generated results
 - shared a generated PNG and link to Twitter
+- animated rainbow gradient on venn circles (maybe a requirement🌈)
 
 ## Todos
 
