@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { myStyle } from '@/styles/index.css'
@@ -7,6 +8,24 @@ import { myStyle } from '@/styles/index.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [apiKey, setApiKey] = useState('')
+  const [result, setResult] = useState('')
+
+  const callOpenAI = async () =>
+    fetch('/api/openai', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        name: 'sandwiches',
+        apiKey,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => setResult(res.text))
+
   return (
     <>
       <Head>
@@ -16,6 +35,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <input
+          type="text"
+          value={apiKey}
+          onChange={(e) => setApiKey(e.target.value)}
+        />
+        <button onClick={callOpenAI}>Send</button>
+        <h1>Result: {result}</h1>
         <div className={styles.description}>
           <p className={myStyle}>
             Get started by editing&nbsp;
