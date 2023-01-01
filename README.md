@@ -56,8 +56,8 @@ Users should be able to:
 
 ## Todos
 
-- [ x ] Wireframe main user flow
-- [ x ] Wireframe onboarding sequence
+- [x] Wireframe main user flow
+- [x] Wireframe onboarding sequence
 - [ ] Final designs that meet all the requirements
 - [ ] Make an example dataset of prompts and good answers
 - [ ] Research how we can accept OpenAI keys and use them for API requests without compromising user security/safety
