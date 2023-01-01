@@ -20,6 +20,7 @@ First result:
 
 Second result:
 ![](images/sketch3.jpg)
+
 ## Requirements
 
 ### Essential
@@ -43,3 +44,6 @@ Users should be able to:
 - save a PNG of the final venn digram with inputs and generated results
 - shared a generated PNG and link to Twitter
 
+## Todos
+
+[] Make wireframes that meet all the requirements
