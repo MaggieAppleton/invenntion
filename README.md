@@ -6,6 +6,8 @@ This project uses `yarn`, and runs on node 18 (check .nvmrc for the exact versio
 
 [Final Designs](/design-process/final-designs.md)
 
+[Design Process](https://github.com/MaggieAppleton/invenntion/wiki/Design-Process)
+
 ## Concept
 
 A venn diagram that combines two concepts or ideas for you. Using a generative language model, we give the user three++ possible ways to combine their initial concepts.
