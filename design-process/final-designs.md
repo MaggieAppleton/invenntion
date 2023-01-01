@@ -26,7 +26,7 @@ Error message for inputs over 100 characters
 
 <br />
 
-With returned results. User has the option to re-run the generation, or reset the venn. At this point the two inputs should still be editable.
+With returned results. Circles animate to move into an overlapped position. User has the option to regenerate the results, or reset the venn. The two inputs should still be editable.
 
 ![](../images/invenntion6.jpg)
 
