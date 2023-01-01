@@ -1,12 +1,24 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { useRect } from '@reach/rect'
 import { Inter } from '@next/font/google'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
+import {
+  circle,
+  circleWrapper,
+  firstCircle,
+  secondCircle,
+  xPos,
+  yPos,
+} from '@/styles/index.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [apiKey, setApiKey] = useState('')
   const [result, setResult] = useState('')
+  const ref = useRef<HTMLDivElement>(null)
+  const rect = useRect(ref)
 
   const callOpenAI = async () =>
     fetch('/api/openai', {
@@ -27,6 +39,7 @@ export default function Home() {
     <>
       <Head>
         <title>Invenntion</title>
+        {/* todo: change the description from "Your mum" */}
         <meta name="description" content="Your mum" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* todo: add a favicon */}
@@ -40,6 +53,16 @@ export default function Home() {
         />
         <button onClick={callOpenAI}>Send</button>
         <h1>Result: {result}</h1>
+        <div className={circleWrapper} ref={ref}>
+          <div className={`${circle} ${firstCircle}`} />
+          <div
+            className={`${circle} ${secondCircle}`}
+            style={assignInlineVars({
+              [xPos]: `${rect?.x}px`,
+              [yPos]: `${rect?.y}px`,
+            })}
+          />
+        </div>
       </main>
     </>
   )
