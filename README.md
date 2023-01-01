@@ -28,7 +28,7 @@ Second result:
 Users should be able to:
 - enter their OpenAI API key to make requests
   - make sure that API key isn't stored or dangerously exposed
-- enter two words or sentences of any length
+- enter two words or sentences. Max length 140 characters.
 - click a button/area that triggers the combination action: sends a request to OpenAI
 - see a loading animation while the request is resolving
 - see the returned results
