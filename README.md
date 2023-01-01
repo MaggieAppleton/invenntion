@@ -8,6 +8,18 @@ Uses OpenAI's GPT-3 to generate ideas.
 
 Users can save generated results as text or PNGs.
 
+## Initial Concept Sketches
+
+Initial rough sketches
+
+Two initial concepts added:
+![](images/sketch1.jpg)
+
+First result:
+![](images/sketch2.jpg)
+
+Second result:
+![](images/sketch3.jpg)
 ## Requirements
 
 ### Essential
@@ -31,15 +43,3 @@ Users should be able to:
 - save a PNG of the final venn digram with inputs and generated results
 - shared a generated PNG and link to Twitter
 
-## Initial Sketches
-
-Initial rough sketches
-
-Two initial concepts added:
-![](images/sketch1.jpg)
-
-First result:
-![](images/sketch2.jpg)
-
-Second result:
-![](images/sketch3.jpg)
