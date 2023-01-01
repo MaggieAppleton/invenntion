@@ -23,6 +23,8 @@ Second result:
 
 ## User Flows
 
+Click on each image to see details and notes
+
 Onboarding
 ![](images/onboarding.png)
 
