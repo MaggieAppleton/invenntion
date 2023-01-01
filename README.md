@@ -1,6 +1,6 @@
 # Design Brief
 
-[Testing](/design-process/DesignProcess.md)
+[Final Designs](/design-process/final-designs.md)
 
 ## Concept
 
