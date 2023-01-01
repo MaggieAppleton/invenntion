@@ -5,7 +5,8 @@ This project uses `yarn`, and runs on node 18 (check .nvmrc for the exact versio
 # Design Brief
 
 [Final Designs](/design-process/final-designs.md)
-[Design Process](https://github.com/MaggieAppleton/invenntion/wiki)
+
+[Design Process](https://github.com/MaggieAppleton/invenntion/wiki/Design-Process)
 
 ## Concept
 
