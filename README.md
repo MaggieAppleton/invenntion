@@ -1,3 +1,7 @@
+# Running the project
+
+This project uses `yarn`, and runs on node 18 (check .nvmrc for the exact version). Run it locally with `yarn dev`.
+
 # Design Brief
 
 [Final Designs](/design-process/final-designs.md)
