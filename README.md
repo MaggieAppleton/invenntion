@@ -37,7 +37,7 @@ Main flow
 
 Users should be able to:
 - enter their OpenAI API key to make requests
-  - make sure that API key isn't stored or dangerously exposed
+  - make sure that API key isn't stored or exposed to 3rd parties
 - enter two words or sentences. Max length 140 characters.
 - click a button/area that triggers the combination action: sends a request to OpenAI
 - see a loading animation while the request is resolving
@@ -61,4 +61,4 @@ Users should be able to:
 - [x] Wireframe onboarding sequence
 - [ ] Final designs that meet all the requirements
 - [ ] Make an example dataset of prompts and good answers
-- [ ] Research how we can accept OpenAI keys and use them for API requests without compromising user security/safety
+- [ ] Research how we can accept OpenAI keys and use them for API requests without compromising user security
