@@ -16,7 +16,8 @@ export default function Home() {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        name: 'sandwiches',
+        input1: 'cats',
+        input2: 'paintball',
         apiKey,
       }),
     })
