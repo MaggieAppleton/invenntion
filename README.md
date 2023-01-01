@@ -1,5 +1,7 @@
 # Design Brief
 
+[Testing](/design-process/DesignProcess.md)
+
 ## Concept
 
 A venn diagram that combines two concepts or ideas for you. Using a generative language model, we give the user three++ possible ways to combine their initial concepts.
