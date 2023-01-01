@@ -42,6 +42,7 @@ Main flow
 ### Essential
 
 Users should be able to:
+
 - enter their OpenAI API key to make requests
   - make sure that API key isn't stored or exposed to 3rd parties
 - enter two words or sentences. Max length 140 characters.
