@@ -4,10 +4,6 @@ This project uses `yarn`, and runs on node 18 (check .nvmrc for the exact versio
 
 # Design Brief
 
-[Final Designs](/design-process/final-designs.md)
-
-[Design Process](https://github.com/MaggieAppleton/invenntion/wiki/Design-Process)
-
 ## Concept
 
 A venn diagram that combines two concepts or ideas for you. Using a generative language model, we give the user three++ possible ways to combine their initial concepts.
@@ -23,11 +19,8 @@ Initial rough sketches
 Two initial concepts added:
 ![](images/sketch1.jpg)
 
-First result:
+Results:
 ![](images/sketch2.jpg)
-
-Second result:
-![](images/sketch3.jpg)
 
 ## User Flows
 
@@ -38,6 +31,13 @@ Onboarding
 
 Main flow
 ![](images/main-flow.png)
+
+## Final Designs
+
+[All final designs](/design-process/final-designs.md)
+
+![](images/invenntion2.jpg)
+![](images/invenntion6.jpg)
 
 ## Requirements
 
