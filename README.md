@@ -1,6 +1,8 @@
-# Running the project
+# How to Run
 
 This project uses `yarn`, and runs on node 18 (check .nvmrc for the exact version). Run it locally with `yarn dev`.
+
+<br />
 
 # Design Brief
 
@@ -12,26 +14,32 @@ Uses OpenAI's GPT-3 to generate ideas.
 
 Users can save generated results as text or PNGs.
 
-Basic concept:
+### Initial concept sketch
+
 ![](images/sketch2.jpg)
 
-Wireframes:
+### [Wireframes](/design-process/wireframes.md)
+
 ![](images/onboarding.png)
 ![](images/main-flow.png)
 
-## Visual Designs
+<br />
 
-[All visual designs](/design-process/visual-designs.md)
+## [Visual Design Mockups](/design-process/visual-designs.md)
 
 ![](images/invenntion2.jpg)
 ![](images/invenntion6.jpg)
 ![](images/invenntion9.jpg)
+
+<br />
 
 ## WIP Proof of Concept
 
 Basic functionality working on the prototype
 
 ![](images/invenntion-process.jpg)
+
+<br />
 
 ## Requirements
 
@@ -64,7 +72,7 @@ Users should be able to:
 
 - [x] Wireframe main user flow
 - [x] Wireframe onboarding sequence
-- [ ] Final designs that meet all the requirements
+- [x] Final designs that meet all the requirements
 - [ ] Write an example dataset of prompts and good answers to fine-tune on
-- [ ] Prompt engineering
+- [x] Good enough prompt engineering
 - [ ] Research how we can accept OpenAI keys and use them for API requests without compromising user security
