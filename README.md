@@ -12,24 +12,11 @@ Uses OpenAI's GPT-3 to generate ideas.
 
 Users can save generated results as text or PNGs.
 
-## Initial Concept Sketches
-
-Initial rough sketches
-
-Two initial concepts added:
-![](images/sketch1.jpg)
-
-Results:
+Basic concept:
 ![](images/sketch2.jpg)
 
-## User Flows
-
-Click on each image to see details and notes
-
-Onboarding
+Wireframes:
 ![](images/onboarding.png)
-
-Main flow
 ![](images/main-flow.png)
 
 ## Visual Designs
@@ -39,6 +26,12 @@ Main flow
 ![](images/invenntion2.jpg)
 ![](images/invenntion6.jpg)
 ![](images/invenntion9.jpg)
+
+## WIP Proof of Concept
+
+Basic functionality working on the prototype
+
+![](images/invenntion-process.jpg)
 
 ## Requirements
 
