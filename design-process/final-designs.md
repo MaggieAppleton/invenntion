@@ -41,3 +41,15 @@ Hover state on the results – hint to click to copy to clipboard appears
 After click on the results – shows confirmation message that result was copied to the clipboard
 
 ![](../images/invenntion8.jpg)
+
+<br />
+
+Save/share menu interactions
+
+![](../images/invenntion9.jpg)
+
+<br />
+
+Share to twitter modal
+
+![](../images/invenntion10.jpg)
