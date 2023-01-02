@@ -37,13 +37,13 @@ export default function Home() {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        input1: 'cats',
-        input2: 'paintball',
+        input1: firstConcept,
+        input2: secondConcept,
         apiKey,
       }),
     })
       .then((res) => res.json())
-      .then((res) => setResult(res.text))
+      .then((res) => setResult(res.text.split('Final answers:')[1]))
 
   return (
     <>
