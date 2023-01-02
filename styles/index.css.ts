@@ -7,7 +7,7 @@ export const xPos = createVar()
 export const yPos = createVar()
 
 export const myStyle = style({
-  color: vars.color.brand,
+  color: vars.color.active,
 })
 
 export const vennWrapper = style({
@@ -43,6 +43,14 @@ export const vennUnion = style({
   },
 })
 
+export const CircleOne = style({
+
+})
+
+export const CircleTwo = style({
+
+})
+
 export const conceptInput = style({
   position: 'absolute',
   top: '50%',
@@ -51,6 +59,9 @@ export const conceptInput = style({
   textAlign: 'center',
   padding: '12px 16px',
   fontFamily: 'inherit',
+  border: `1px solid ${vars.color.gray3}`,
+  borderRadius: '4px',
+  boxShadow: '0px 6px 15px 2px rgba(50,50,90, 0.1)',
 })
 
 export const firstConceptInput = style({

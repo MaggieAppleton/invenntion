@@ -11,6 +11,8 @@ import {
   firstConceptInput,
   secondConceptInput,
   vennSVG,
+  circleOne,
+  circleTwo,
 } from '@/styles/index.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -66,8 +68,56 @@ export default function Home() {
         <div className={vennWrapper}>
           <div className={vennSizer}>
             <svg viewBox="15 0 200 100" className={vennSVG}>
-              <circle cx="80" cy="50" r="50" fill="#a7f3ff" />
-              <circle cx="150" cy="50" r="50" fill="#ffbc9d" />
+              <defs>
+                <linearGradient
+                  id="venn-gradient"
+                  x1="50%"
+                  y1="0%"
+                  x2="50%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#baacff">
+                    <animate
+                      attributeName="stop-color"
+                      values="#baacff; #64ceff;"
+                      dur="20s"
+                      repeatCount="indefinite"
+                    ></animate>
+                  </stop>
+
+                  <stop offset="50%" stop-color="#64ceff">
+                    <animate
+                      attributeName="stop-color"
+                      values="#64ceff; #ffb2f1; #ffb9a2;"
+                      dur="20s"
+                      repeatCount="indefinite"
+                    ></animate>
+                  </stop>
+
+                  <stop offset="100%" stop-color="#ffb9a2">
+                    <animate
+                      attributeName="stop-color"
+                      values="#ffb9a2; #baacff;"
+                      dur="20s"
+                      repeatCount="indefinite"
+                    ></animate>
+                  </stop>
+                </linearGradient>
+              </defs>
+              <circle
+                cx="80"
+                cy="50"
+                r="50"
+                className={circleOne}
+                fill="url('#venn-gradient')"
+              />
+              <circle
+                cx="150"
+                cy="50"
+                r="50"
+                className={circleTwo}
+                fill="url('#venn-gradient')"
+              />
               <path
                 className={vennUnion}
                 d="M 79 50 A 50 50 0 0 1 151 50 A 50 50 0 0 1 79 50 Z"
