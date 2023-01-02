@@ -1,26 +1,13 @@
 import Head from 'next/head'
-import { useRef, useState } from 'react'
-import { useRect } from '@reach/rect'
+import { useState } from 'react'
 import { Inter } from '@next/font/google'
-import { assignInlineVars } from '@vanilla-extract/dynamic'
-import {
-  circle,
-  circleWrapper,
-  firstCircle,
-  secondCircle,
-  xPos,
-  yPos,
-  altCircle,
-  middleSection,
-} from '@/styles/index.css'
+import { altCircle, middleSection } from '@/styles/index.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [apiKey, setApiKey] = useState('')
   const [result, setResult] = useState('')
-  const ref = useRef<HTMLDivElement>(null)
-  const rect = useRect(ref)
 
   const callOpenAI = async () =>
     fetch('/api/openai', {
@@ -56,16 +43,6 @@ export default function Home() {
         />
         <button onClick={callOpenAI}>Send</button>
         <h1>Result: {result}</h1>
-        <div className={circleWrapper} ref={ref}>
-          <div className={`${circle} ${firstCircle}`} />
-          <div
-            className={`${circle} ${secondCircle}`}
-            style={assignInlineVars({
-              [xPos]: `${rect?.x}px`,
-              [yPos]: `${rect?.y}px`,
-            })}
-          />
-        </div>
         <svg
           className={altCircle}
           width="800"
