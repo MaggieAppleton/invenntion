@@ -46,7 +46,11 @@ export default function Home() {
       }),
     })
       .then((res) => res.json())
-      .then((res) => setResult(res.text.split('Final answers:')[1]))
+      .then((res) => {
+        console.log(res)
+        setResult(res.text)
+        // setResult(res.text.split('Final answers:')[1])
+      })
 
   return (
     <>
@@ -116,7 +120,7 @@ export default function Home() {
               />
             </svg>
             <button className={generateButton}>Generate</button>
-            <p>{result}</p>
+
             <TextareaAutosize
               name="first-concept"
               className={`${conceptInput} ${firstConceptInput}`}
@@ -133,6 +137,7 @@ export default function Home() {
             />
           </div>
         </div>
+        <p>{result}</p>
       </main>
     </>
   )

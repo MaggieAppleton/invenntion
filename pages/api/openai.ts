@@ -6,7 +6,7 @@ const request = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(401).json({ error: 'No credentials sent!' })
   }
 
-  const prompt = `Question: Consider the qualities of a dog and a burrito.Come up with a set of three interesting and creative inventions that combine these based on their qualities.
+  const prompt = `Question: Consider the qualities of a dog and a burrito. Come up with a set of three interesting and creative inventions that combine these based on their qualities.
   Are follow up questions needed here: Yes
   Follow up: What qualities does a dog have?
   Immediate answer:
