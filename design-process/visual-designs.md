@@ -1,4 +1,4 @@
-# Final Designs
+# Visual Designs
 
 <br />
 
