@@ -23,6 +23,8 @@ Users can save generated results as text or PNGs.
 ![](images/onboarding.png)
 ![](images/main-flow.png)
 
+<br />
+
 ## [Visual Design Mockups](/design-process/visual-designs.md)
 
 ![](images/invenntion2.jpg)
