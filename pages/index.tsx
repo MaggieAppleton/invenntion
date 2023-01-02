@@ -18,6 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [apiKey, setApiKey] = useState('')
   const [result, setResult] = useState('')
+
   const [firstConcept, setFirstConcept] = useState('')
   const [secondConcept, setSecondConcept] = useState('')
 
@@ -62,7 +63,6 @@ export default function Home() {
           onChange={(e) => setApiKey(e.target.value)}
         />
         <button onClick={callOpenAI}>Send</button>
-        <h1>Result: {result}</h1>
         <div className={vennWrapper}>
           <div className={vennSizer}>
             <svg viewBox="15 0 200 100" className={vennSVG}>
@@ -75,6 +75,7 @@ export default function Home() {
               />
             </svg>
             <button className={generateButton}>Generate</button>
+            <p>{result}</p>
             <TextareaAutosize
               name="first-concept"
               className={`${conceptInput} ${firstConceptInput}`}
