@@ -32,12 +32,13 @@ Onboarding
 Main flow
 ![](images/main-flow.png)
 
-## Final Designs
+## Visual Designs
 
-[All final designs](/design-process/final-designs.md)
+[All visual designs](/design-process/final-designs.md)
 
 ![](images/invenntion2.jpg)
 ![](images/invenntion6.jpg)
+![](images/invenntion9.jpg)
 
 ## Requirements
 
