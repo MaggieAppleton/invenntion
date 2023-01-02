@@ -10,6 +10,7 @@ import {
   conceptInput,
   firstConceptInput,
   secondConceptInput,
+  vennSVG,
 } from '@/styles/index.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -64,7 +65,7 @@ export default function Home() {
         <h1>Result: {result}</h1>
         <div className={vennWrapper}>
           <div className={vennSizer}>
-            <svg viewBox="15 0 200 100">
+            <svg viewBox="15 0 200 100" className={vennSVG}>
               <circle cx="80" cy="50" r="50" fill="#a7f3ff" />
               <circle cx="150" cy="50" r="50" fill="#ffbc9d" />
               <path
