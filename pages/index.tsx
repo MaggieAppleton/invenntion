@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import { Inter } from '@next/font/google'
-import { altCircle, middleSection } from '@/styles/index.css'
+import { vennSVG, vennUnion } from '@/styles/index.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,16 +43,11 @@ export default function Home() {
         />
         <button onClick={callOpenAI}>Send</button>
         <h1>Result: {result}</h1>
-        <svg
-          className={altCircle}
-          width="800"
-          height="700"
-          viewBox="0 0 200 100"
-        >
+        <svg className={vennSVG} width="800" height="700" viewBox="0 0 200 100">
           <circle cx="80" cy="50" r="50" fill="#a7f3ff" />
           <circle cx="150" cy="50" r="50" fill="#ffbc9d" />
           <path
-            className={middleSection}
+            className={vennUnion}
             d="M 79 50 A 50 50 0 0 1 151 50 A 50 50 0 0 1 79 50 Z"
             transform="rotate(90 115 50)"
           />

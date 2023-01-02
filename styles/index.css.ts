@@ -8,13 +8,13 @@ export const myStyle = style({
   color: vars.color.brand,
 })
 
-export const altCircle = style({
+export const vennSVG = style({
   position: 'relative',
   top: '300px',
   left: '300px',
 })
 
-export const middleSection = style({
+export const vennUnion = style({
   fill: 'white',
   transition: '0.3s ease-in',
   stroke: 'rgba(255, 255, 255, 0)',
