@@ -13,6 +13,7 @@ export const myStyle = style({
 export const vennWrapper = style({
   display: 'flex',
   justifyContent: 'center',
+  paddingTop: '6rem'
 })
 
 export const vennSizer = style({
@@ -30,6 +31,7 @@ export const generateButton = style({
 
 export const vennSVG = style({
   minWidth: `${vennWidth}px`,
+  position: 'absolute',
 })
 
 export const vennUnion = style({
@@ -43,13 +45,20 @@ export const vennUnion = style({
   },
 })
 
-export const CircleOne = style({
-
+export const ShareButton = style({
+  position: 'absolute',
+  top: '1rem',
+  right: '1rem',
+  fontSize: '14px'
 })
 
-export const CircleTwo = style({
-
+export const HelpButton = style({
+  position: 'absolute',
+  left: '1rem',
+  bottom: '1rem',
+  fontSize: '14px'
 })
+
 
 export const conceptInput = style({
   position: 'absolute',

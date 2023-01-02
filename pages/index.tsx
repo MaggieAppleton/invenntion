@@ -11,9 +11,9 @@ import {
   firstConceptInput,
   secondConceptInput,
   vennSVG,
-  circleOne,
-  circleTwo,
 } from '@/styles/index.css'
+import Share from '../components/Share'
+import Help from '../components/Help'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -59,6 +59,9 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main className={inter.className}>
+        <Share />
+        <Help />
+        <label htmlFor="api-key">API Key</label>
         <input
           type="text"
           value={apiKey}
@@ -104,20 +107,8 @@ export default function Home() {
                   </stop>
                 </linearGradient>
               </defs>
-              <circle
-                cx="80"
-                cy="50"
-                r="50"
-                className={circleOne}
-                fill="url('#venn-gradient')"
-              />
-              <circle
-                cx="150"
-                cy="50"
-                r="50"
-                className={circleTwo}
-                fill="url('#venn-gradient')"
-              />
+              <circle cx="80" cy="50" r="50" fill="url('#venn-gradient')" />
+              <circle cx="150" cy="50" r="50" fill="url('#venn-gradient')" />
               <path
                 className={vennUnion}
                 d="M 79 50 A 50 50 0 0 1 151 50 A 50 50 0 0 1 79 50 Z"
