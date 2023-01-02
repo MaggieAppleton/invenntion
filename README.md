@@ -34,7 +34,7 @@ Main flow
 
 ## Visual Designs
 
-[All visual designs](/design-process/final-designs.md)
+[All visual designs](/design-process/visual-designs.md)
 
 ![](images/invenntion2.jpg)
 ![](images/invenntion6.jpg)
