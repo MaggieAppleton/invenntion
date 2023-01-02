@@ -70,7 +70,7 @@ Users should be able to:
 
 - [x] Wireframe main user flow
 - [x] Wireframe onboarding sequence
-- [ ] Final designs that meet all the requirements
+- [x] Final designs that meet all the requirements
 - [ ] Write an example dataset of prompts and good answers to fine-tune on
-- [ ] Prompt engineering
+- [x] Good enough prompt engineering
 - [ ] Research how we can accept OpenAI keys and use them for API requests without compromising user security
