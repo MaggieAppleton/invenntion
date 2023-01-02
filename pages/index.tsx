@@ -1,13 +1,32 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { Inter } from '@next/font/google'
-import { vennSVG, vennUnion } from '@/styles/index.css'
+import TextareaAutosize from 'react-textarea-autosize'
+import {
+  vennWrapper,
+  vennSizer,
+  vennUnion,
+  generateButton,
+  conceptInput,
+  firstConceptInput,
+  secondConceptInput,
+} from '@/styles/index.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [apiKey, setApiKey] = useState('')
   const [result, setResult] = useState('')
+  const [firstConcept, setFirstConcept] = useState('')
+  const [secondConcept, setSecondConcept] = useState('')
+
+  const handleFirstConceptChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setFirstConcept(e.target.value)
+  }
+
+  const handleSecondConceptChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setSecondConcept(e.target.value)
+  }
 
   const callOpenAI = async () =>
     fetch('/api/openai', {
@@ -43,15 +62,32 @@ export default function Home() {
         />
         <button onClick={callOpenAI}>Send</button>
         <h1>Result: {result}</h1>
-        <svg className={vennSVG} width="800" height="700" viewBox="0 0 200 100">
-          <circle cx="80" cy="50" r="50" fill="#a7f3ff" />
-          <circle cx="150" cy="50" r="50" fill="#ffbc9d" />
-          <path
-            className={vennUnion}
-            d="M 79 50 A 50 50 0 0 1 151 50 A 50 50 0 0 1 79 50 Z"
-            transform="rotate(90 115 50)"
-          />
-        </svg>
+        <div className={vennWrapper}>
+          <div className={vennSizer}>
+            <svg viewBox="15 0 200 100">
+              <circle cx="80" cy="50" r="50" fill="#a7f3ff" />
+              <circle cx="150" cy="50" r="50" fill="#ffbc9d" />
+              <path
+                className={vennUnion}
+                d="M 79 50 A 50 50 0 0 1 151 50 A 50 50 0 0 1 79 50 Z"
+                transform="rotate(90 115 50)"
+              />
+            </svg>
+            <TextareaAutosize
+              name="first-concept"
+              className={`${conceptInput} ${firstConceptInput}`}
+              value={firstConcept}
+              onChange={handleFirstConceptChange}
+            />
+            <button className={generateButton}>Generate</button>
+            <TextareaAutosize
+              name="second-concept"
+              className={`${conceptInput} ${secondConceptInput}`}
+              value={secondConcept}
+              onChange={handleSecondConceptChange}
+            />
+          </div>
+        </div>
       </main>
     </>
   )
