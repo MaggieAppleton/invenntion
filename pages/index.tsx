@@ -10,6 +10,8 @@ import {
   secondCircle,
   xPos,
   yPos,
+  altCircle,
+  middleSection,
 } from '@/styles/index.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -64,6 +66,20 @@ export default function Home() {
             })}
           />
         </div>
+        <svg
+          className={altCircle}
+          width="800"
+          height="700"
+          viewBox="0 0 200 100"
+        >
+          <circle cx="80" cy="50" r="50" fill="#a7f3ff" />
+          <circle cx="150" cy="50" r="50" fill="#ffbc9d" />
+          <path
+            className={middleSection}
+            d="M 79 50 A 50 50 0 0 1 151 50 A 50 50 0 0 1 79 50 Z"
+            transform="rotate(90 115 50)"
+          />
+        </svg>
       </main>
     </>
   )
