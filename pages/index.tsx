@@ -73,18 +73,20 @@ export default function Home() {
                 transform="rotate(90 115 50)"
               />
             </svg>
+            <button className={generateButton}>Generate</button>
             <TextareaAutosize
               name="first-concept"
               className={`${conceptInput} ${firstConceptInput}`}
               value={firstConcept}
               onChange={handleFirstConceptChange}
+              placeholder='Write a concept or idea eg. "popcorn" or "cricket"'
             />
-            <button className={generateButton}>Generate</button>
             <TextareaAutosize
               name="second-concept"
               className={`${conceptInput} ${secondConceptInput}`}
               value={secondConcept}
               onChange={handleSecondConceptChange}
+              placeholder='Write a concept or idea eg. "snowflakes" or "economics"'
             />
           </div>
         </div>

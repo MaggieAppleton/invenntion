@@ -1,6 +1,8 @@
 import { style, createVar } from '@vanilla-extract/css'
 import { vars } from '@theme'
 
+const vennWidth = 1200
+
 export const xPos = createVar()
 export const yPos = createVar()
 
@@ -14,8 +16,8 @@ export const vennWrapper = style({
 })
 
 export const vennSizer = style({
-  width: '1200px',
-  height: '600px',
+  width: `${vennWidth}px`,
+  height: `${vennWidth / 2}px`,
   position: 'relative',
 })
 
@@ -24,6 +26,10 @@ export const generateButton = style({
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
+})
+
+export const vennSVG = style({
+  minWidth: `${vennWidth}px`,
 })
 
 export const vennUnion = style({
@@ -42,6 +48,9 @@ export const conceptInput = style({
   top: '50%',
   transform: 'translateY(-50%)',
   resize: 'none',
+  textAlign: 'center',
+  padding: '12px 16px',
+  fontFamily: 'inherit',
 })
 
 export const firstConceptInput = style({
