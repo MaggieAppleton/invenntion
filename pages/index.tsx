@@ -77,43 +77,41 @@ export default function Home() {
             <svg viewBox="15 0 200 100" className={vennSVG}>
               <defs>
                 <linearGradient
-                  id="venn-gradient"
-                  x1="50%"
-                  y1="0%"
-                  x2="50%"
-                  y2="100%"
+                  id="a"
+                  gradientUnits="objectBoundingBox"
+                  x1="0"
+                  y1="0"
+                  x2="1"
+                  y2="1"
                 >
-                  <stop offset="0%" stop-color="#baacff">
+                  <stop offset="0" stop-color="#caecf7">
                     <animate
                       attributeName="stop-color"
-                      values="#baacff; #64ceff;"
-                      dur="20s"
+                      values="#caecf7;#fff2c4;#fcdccd;#dbc4f8;#fcdccd;#caecf7;"
+                      dur="30s"
                       repeatCount="indefinite"
                     ></animate>
                   </stop>
-
-                  <stop offset="50%" stop-color="#64ceff">
+                  <stop offset="1" stop-color="#fff2c4">
                     <animate
                       attributeName="stop-color"
-                      values="#64ceff; #ffb2f1; #ffb9a2;"
-                      dur="20s"
+                      values="#fff2c4;#fcdccd;#caecf7;#fcdccd;#fff2c4;"
+                      dur="30s"
                       repeatCount="indefinite"
                     ></animate>
                   </stop>
-
-                  <stop offset="100%" stop-color="#ffb9a2">
-                    <animate
-                      attributeName="stop-color"
-                      values="#ffb9a2; #baacff;"
-                      dur="20s"
-                      repeatCount="indefinite"
-                    ></animate>
-                  </stop>
+                  <animateTransform
+                    attributeName="gradientTransform"
+                    type="rotate"
+                    from="45"
+                    to="405"
+                    dur="20s"
+                    repeatCount="indefinite"
+                  />
                 </linearGradient>
               </defs>
-              <circle cx="150" cy="50" r="50" fill="#8080ff" />
-              <circle cx="80" cy="50" r="50" fill="#8080ff" />
-
+              <circle cx="150" cy="50" r="50" fill="url(#a)" />
+              <circle cx="80" cy="50" r="50" fill="url(#a)" />
               <clipPath id="clip1">
                 <circle cx="80" cy="50" r="50" />
               </clipPath>
