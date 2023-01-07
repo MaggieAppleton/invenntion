@@ -38,20 +38,21 @@ export const generateButton = style({
   height: '80px',
 })
 
+export const circleTransition = style({
+  transition: '1s'
+})
+
+export const animateCircle1 = style({
+  transform: 'translateX(-20px)'
+})
+
+export const animateCircle2 = style({
+  transform: 'translateX(20px)'
+})
+
 export const vennSVG = style({
   minWidth: `${vennWidth}px`,
   position: 'absolute',
-})
-
-export const vennUnion = style({
-  fill: 'white',
-  transition: '0.3s ease-in',
-  stroke: 'rgba(255, 255, 255, 0)',
-  strokeWidth: '6px',
-  ':hover': {
-    filter: 'drop-shadow(3px 0px 10px rgb(30 30 60 / 0.25))',
-    stroke: 'rgba(255, 255, 255, 0.5)',
-  },
 })
 
 export const ShareButton = style({

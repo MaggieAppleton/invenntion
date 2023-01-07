@@ -1,16 +1,18 @@
 import Head from 'next/head'
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useRef, useState } from 'react'
 import { Inter } from '@next/font/google'
 import TextareaAutosize from 'react-textarea-autosize'
 import {
   vennWrapper,
   vennSizer,
-  vennUnion,
   generateButton,
   conceptInput,
   firstConceptInput,
   secondConceptInput,
   vennSVG,
+  animateCircle1,
+  animateCircle2,
+  circleTransition,
 } from '@/styles/index.css'
 import Share from '../components/Share'
 import Help from '../components/Help'
@@ -21,9 +23,12 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [apiKey, setApiKey] = useState('')
   const [result, setResult] = useState('')
+  const [animating, setAnimating] = useState(false)
 
   const [firstConcept, setFirstConcept] = useState('')
   const [secondConcept, setSecondConcept] = useState('')
+
+  const clipPathRef = useRef<SVGCircleElement>(null)
 
   const handleFirstConceptChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setFirstConcept(e.target.value)
@@ -31,6 +36,11 @@ export default function Home() {
 
   const handleSecondConceptChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setSecondConcept(e.target.value)
+  }
+
+  const getAnswer = async () => {
+    setAnimating(true)
+    // await callOpenAI()
   }
 
   const callOpenAI = async () =>
@@ -110,12 +120,44 @@ export default function Home() {
                   />
                 </linearGradient>
               </defs>
-              <circle cx="150" cy="50" r="50" fill="url(#a)" />
-              <circle cx="80" cy="50" r="50" fill="url(#a)" />
-              <clipPath id="clip1">
-                <circle cx="80" cy="50" r="50" />
+              <circle
+                className={`${circleTransition} ${
+                  animating ? animateCircle1 : ''
+                }`}
+                cx="150"
+                cy="50"
+                r="50"
+                fill="url(#a)"
+              />
+              <circle
+                className={`${circleTransition} ${
+                  animating ? animateCircle2 : ''
+                }`}
+                cx="80"
+                cy="50"
+                r="50"
+                fill="url(#a)"
+              />
+              <clipPath
+                id="clip1"
+                className={`${circleTransition} ${
+                  animating ? animateCircle2 : ''
+                }`}
+              >
+                <circle
+                  ref={clipPathRef}
+                  cx="80"
+                  cy="50"
+                  r="50"
+                  className={`${circleTransition} ${
+                    animating ? animateCircle2 : ''
+                  }`}
+                />
               </clipPath>
               <circle
+                className={`${circleTransition} ${
+                  animating ? animateCircle1 : ''
+                }`}
                 cx="150"
                 cy="50"
                 r="50"
@@ -123,7 +165,7 @@ export default function Home() {
                 clipPath="url('#clip1')"
               />
             </svg>
-            <button className={generateButton} onClick={callOpenAI}>
+            <button className={generateButton} onClick={getAnswer}>
               Generate
               <ArrowsInLineHorizontal size={64} weight="thin" />
             </button>
