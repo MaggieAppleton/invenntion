@@ -9,7 +9,7 @@ const request = async (req: NextApiRequest, res: NextApiResponse) => {
   const prompt = `Question: Consider the qualities of a dog and a burrito. Come up with a set of three interesting and creative inventions that combine these based on their qualities.
   Are follow up questions needed here: Yes
   Follow up: What qualities does a dog have?
-  Immediate answer:
+  Qualities:
   * Loyalty – Dogs are known for their loyalty and devotion to their owners.
   * Intelligence – Dogs are intelligent animals and can be trained to obey commands.
   * Affection – Dogs show affection to their owners through cuddling and licking.
@@ -22,7 +22,8 @@ const request = async (req: NextApiRequest, res: NextApiResponse) => {
   * Wrapping – A burrito should be wrapped in a soft and warm tortilla.
   * Warm – A burrito is best when it is warm and fresh.
   * Presentation – A burrito should look appetizing and should be garnished with fresh ingredients.
-  Final answers:
+  Using the above qualities, come up with three interesting and creative inventions that combine a dog and a burrito.
+  Inventions:
   1. Burrito Dog Coat: A warm dog coat made to look like a wrapped-up tortilla with cheese, beans, salsa, and guacamole inside.
   2. Burrito Dog Treats: Delicious treats made from flavorful burrito ingredients like beans, meat, and salsa. But for dogs.
   3. The Burrito Dog Toy: A stuffed toy shaped like a bean burrito. When the toy is squeezed, it looks like cheese is coming out of the toy.
@@ -30,7 +31,7 @@ const request = async (req: NextApiRequest, res: NextApiResponse) => {
   Question: Consider the qualities of ${req.body.input1} and ${req.body.input2}. Come up with a set of three interesting and creative inventions that combine these based on their qualities.
   Are follow up questions needed here: Yes
   Follow up: What qualities does ${req.body.input1} have?
-  Immediate answer:`
+  Qualities:`
   const apiKey = req.headers.authorization.split(' ')[1]
 
   const openai = new OpenAI(apiKey)

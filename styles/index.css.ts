@@ -27,6 +27,15 @@ export const generateButton = style({
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  border: 'none', 
+  backgroundColor: 'transparent',
+  cursor: 'pointer',
+  color: vars.color.gray5,
+  width: '80px',
+  height: '80px',
 })
 
 export const vennSVG = style({
@@ -49,14 +58,24 @@ export const ShareButton = style({
   position: 'absolute',
   top: '1rem',
   right: '1rem',
-  fontSize: '14px'
+  fontSize: '14px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gridGap: '0.5rem',
+  color: vars.color.gray4,
 })
 
 export const HelpButton = style({
   position: 'absolute',
   left: '1rem',
   bottom: '1rem',
-  fontSize: '14px'
+  fontSize: '14px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gridGap: '0.5rem',
+  color: vars.color.gray4,
 })
 
 

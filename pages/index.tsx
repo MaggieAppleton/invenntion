@@ -14,6 +14,7 @@ import {
 } from '@/styles/index.css'
 import Share from '../components/Share'
 import Help from '../components/Help'
+import { ArrowsInLineHorizontal } from 'phosphor-react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -49,7 +50,7 @@ export default function Home() {
       .then((res) => {
         console.log(res)
         setResult(res.text)
-        // setResult(res.text.split('Final answers:')[1])
+        setResult(res.text.split('Inventions:')[1])
       })
 
   return (
@@ -71,7 +72,6 @@ export default function Home() {
           value={apiKey}
           onChange={(e) => setApiKey(e.target.value)}
         />
-        <button onClick={callOpenAI}>Send</button>
         <div className={vennWrapper}>
           <div className={vennSizer}>
             <svg viewBox="15 0 200 100" className={vennSVG}>
@@ -111,15 +111,24 @@ export default function Home() {
                   </stop>
                 </linearGradient>
               </defs>
-              <circle cx="80" cy="50" r="50" fill="url('#venn-gradient')" />
-              <circle cx="150" cy="50" r="50" fill="url('#venn-gradient')" />
-              <path
-                className={vennUnion}
-                d="M 79 50 A 50 50 0 0 1 151 50 A 50 50 0 0 1 79 50 Z"
-                transform="rotate(90 115 50)"
+              <circle cx="150" cy="50" r="50" fill="#8080ff" />
+              <circle cx="80" cy="50" r="50" fill="#8080ff" />
+
+              <clipPath id="clip1">
+                <circle cx="80" cy="50" r="50" />
+              </clipPath>
+              <circle
+                cx="150"
+                cy="50"
+                r="50"
+                fill="#fff"
+                clipPath="url('#clip1')"
               />
             </svg>
-            <button className={generateButton}>Generate</button>
+            <button className={generateButton} onClick={callOpenAI}>
+              Generate
+              <ArrowsInLineHorizontal size={64} weight="thin" />
+            </button>
 
             <TextareaAutosize
               name="first-concept"
