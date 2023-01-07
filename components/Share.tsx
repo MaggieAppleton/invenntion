@@ -3,9 +3,9 @@ import { Export } from 'phosphor-react'
 
 export default function Share() {
   return (
-    <div className={ShareButton}>
-      <span>Save and Share</span>
+    <button className={ShareButton}>
+      <span>Save or Share</span>
       <Export size={20} />
-    </div>
+    </button>
   )
 }

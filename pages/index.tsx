@@ -133,14 +133,14 @@ export default function Home() {
               className={`${conceptInput} ${firstConceptInput}`}
               value={firstConcept}
               onChange={handleFirstConceptChange}
-              placeholder='Write a concept or idea eg. "popcorn" or "cricket"'
+              placeholder='Write a concept eg. "popcorn"'
             />
             <TextareaAutosize
               name="second-concept"
               className={`${conceptInput} ${secondConceptInput}`}
               value={secondConcept}
               onChange={handleSecondConceptChange}
-              placeholder='Write a concept or idea eg. "snowflakes" or "economics"'
+              placeholder='Write a concept eg. "snowflakes"'
             />
           </div>
         </div>

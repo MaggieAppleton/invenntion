@@ -33,7 +33,7 @@ export const generateButton = style({
   border: 'none', 
   backgroundColor: 'transparent',
   cursor: 'pointer',
-  color: vars.color.gray5,
+  color: vars.color.gray6,
   width: '80px',
   height: '80px',
 })
@@ -61,9 +61,19 @@ export const ShareButton = style({
   fontSize: '14px',
   display: 'flex',
   alignItems: 'center',
+  padding: '0.4rem 0.6rem',
+  border: 'none',
+  backgroundColor: 'transparent',
   justifyContent: 'center',
-  gridGap: '0.5rem',
-  color: vars.color.gray4,
+  gridGap: '0.4rem',
+  color: vars.color.gray5,
+  borderRadius: '4px',
+  transition: '0.2s ease-in',
+  ':hover': {
+    color: vars.color.gray7,
+    cursor: 'pointer',
+    backgroundColor: vars.color.gray1,
+  }
 })
 
 export const HelpButton = style({
@@ -72,10 +82,20 @@ export const HelpButton = style({
   bottom: '1rem',
   fontSize: '14px',
   display: 'flex',
+  padding: '0.4rem 0.6rem',
   alignItems: 'center',
+  border: 'none',
+  backgroundColor: 'transparent',
   justifyContent: 'center',
-  gridGap: '0.5rem',
-  color: vars.color.gray4,
+  gridGap: '0.4rem',
+  color: vars.color.gray5,
+  borderRadius: '4px',
+  transition: '0.2s ease-in',
+  ':hover': {
+    color: vars.color.gray7,
+    cursor: 'pointer',
+    backgroundColor: vars.color.gray1,
+  }
 })
 
 
@@ -87,9 +107,13 @@ export const conceptInput = style({
   textAlign: 'center',
   padding: '12px 16px',
   fontFamily: 'inherit',
-  border: `1px solid ${vars.color.gray3}`,
+  border: 'none',
   borderRadius: '4px',
-  boxShadow: '0px 6px 15px 2px rgba(50,50,90, 0.1)',
+  boxShadow: '0px 6px 15px 2px rgba(50,20,50, 0.1)',
+  color: vars.color.gray8,
+  '::placeholder': {
+    color: vars.color.gray4,
+  },
 })
 
 export const firstConceptInput = style({
