@@ -43,11 +43,11 @@ export const circleTransition = style({
 })
 
 export const animateCircle1 = style({
-  transform: 'translateX(-20px)'
+  transform: 'translateX(-24px)'
 })
 
 export const animateCircle2 = style({
-  transform: 'translateX(20px)'
+  transform: 'translateX(24px)'
 })
 
 export const vennSVG = style({
