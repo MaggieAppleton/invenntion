@@ -40,7 +40,7 @@ export default function Home() {
 
   const getAnswer = async () => {
     setAnimating(true)
-    // await callOpenAI()
+    await callOpenAI()
   }
 
   const callOpenAI = async () =>
@@ -60,8 +60,27 @@ export default function Home() {
       .then((res) => {
         console.log(res)
         setResult(res.text)
-        setResult(res.text.split('Inventions:')[1])
       })
+
+  const formatResults = (results: string) => {
+    // Title: {title}. Description: {description}.
+    const formattedResults = results
+      .split('Title: ')
+      .map((result) => {
+        const title = result.split('. Description: ')[0]
+        const description = result.split('. Description: ')[1]
+        return { title, description }
+      })
+      .filter((result) => result.title && result.description)
+      .map((result, i) => (
+        <div key={i}>
+          <h4>{result.title}</h4>
+          <p>{result.description}</p>
+        </div>
+      ))
+
+    return formattedResults
+  }
 
   return (
     <>
@@ -186,7 +205,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <p>{result}</p>
+        {result && <p>{formatResults(result)}</p>}
       </main>
     </>
   )
