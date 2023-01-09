@@ -6,32 +6,14 @@ const request = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(401).json({ error: 'No credentials sent!' })
   }
 
-  const prompt = `Question: Consider the qualities of a dog and a burrito. Come up with a set of three interesting and creative inventions that combine these based on their qualities.
-  Are follow up questions needed here: Yes
-  Follow up: What qualities does a dog have?
-  Qualities:
-  * Loyalty – Dogs are known for their loyalty and devotion to their owners.
-  * Intelligence – Dogs are intelligent animals and can be trained to obey commands.
-  * Affection – Dogs show affection to their owners through cuddling and licking.
-  * Playfulness – Dogs have an innate sense of playfulness and enjoy playing with toys or other animals.
-  * Exercise – Dogs need regular exercise to stay healthy and active.
-  Follow up: What qualities does a burrito have?
-  Immediate answer:
-  * Filling – A burrito should be filled with a variety of ingredients such as beans, meat, vegetables, and cheese.
-  * Flavorful – A burrito should have a flavorful combination of ingredients and spices.
-  * Wrapping – A burrito should be wrapped in a soft and warm tortilla.
-  * Warm – A burrito is best when it is warm and fresh.
-  * Presentation – A burrito should look appetizing and should be garnished with fresh ingredients.
-  Using the above qualities, come up with three interesting and creative inventions that combine a dog and a burrito.
+  const prompt = `Question: Consider the qualities of a dog and a burrito. Come up with a set of three interesting and creative inventions that combine these based on their qualities. These should use the unique parts, qualities, and functions of dogs and burritos. Don't sound too salesy or promotion. Describe the inventions in detail.
   Inventions:
-  1. Burrito Dog Coat: A warm dog coat made to look like a wrapped-up tortilla with cheese, beans, salsa, and guacamole inside.
-  2. Burrito Dog Treats: Delicious treats made from flavorful burrito ingredients like beans, meat, and salsa. But for dogs.
-  3. The Burrito Dog Toy: A stuffed toy shaped like a bean burrito. When the toy is squeezed, it looks like cheese is coming out of the toy.
+  Title: Burrito Dog Coat. Description: A warm dog coat made to look like a wrapped-up tortilla with cheese, beans, salsa, and guacamole inside.
+  Title: TexMex Dog Treats. Description: Dog treats made from flavorful burrito ingredients like beans, meat, and salsa.
+  Title: Burrito Chew Toy. Description: A squeaky toy shaped like a bean burrito. When the toy is squeezed, it looks like cheese is coming out of the toy.
 
-  Question: Consider the qualities of ${req.body.input1} and ${req.body.input2}. Come up with a set of three interesting and creative inventions that combine these based on their qualities.
-  Are follow up questions needed here: Yes
-  Follow up: What qualities does ${req.body.input1} have?
-  Qualities:`
+  Question: Consider the qualities of ${req.body.input1} and ${req.body.input2}. Come up with a set of three interesting and creative inventions that combine these based on their qualities. These should use the unique parts, qualities, and functions of ${req.body.input1} and ${req.body.input2}. Don't sound too salesy or promotion. Describe the inventions in detail.
+  Inventions:`
   const apiKey = req.headers.authorization.split(' ')[1]
 
   const openai = new OpenAI(apiKey)
